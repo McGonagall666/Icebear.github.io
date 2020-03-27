@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="Ice Bear&#39;s Blog">
 <meta property="og:description" content="Hexo 进入终端或者iTerm，先检测有没有安装node、npm、git 123node -v npm --versiongit --version  然后安装hexo 1npm install -g hexo-cli  安装用于部署到Git的插件 1npm install hexo-deployer-git --save  创建一个存放Blog的文件夹 12345678#在用户目录下面创建一个">
 <meta property="article:published_time" content="2020-03-26T07:30:18.000Z">
-<meta property="article:modified_time" content="2020-03-27T04:26:11.827Z">
+<meta property="article:modified_time" content="2020-03-27T04:32:35.511Z">
 <meta property="article:author" content="Ice Bear">
 <meta property="article:tag" content="“安装教程”">
 <meta name="twitter:card" content="summary">
@@ -417,7 +417,10 @@
 </li>
 <li><p>在Blog\source文件夹下面新建CNAME无后缀文件（在此新建文件可保证hexo d不被删除），文本编辑打开，输入个人购买的域名，比如<a href="http://www.xxx.com" target="_blank" rel="noopener">www.xxx.com</a></p>
 </li>
-<li><p>在</p>
+<li><p>然后同步到github</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>CNAME的作用是，当CNAME文件发送到github时，Github Pages识别里面的域名，如果访问自己的域名显示404，可以去查看xxx.github.io库下面有无CNAME文件（不是CNAME.html），如果没有，则去当前repository的设定里Github Pages添加自定义域名。</p>
 </li>
 </ul>
 
