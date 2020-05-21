@@ -79,14 +79,14 @@
 
 
 
-<meta name="description" content="Hexo 进入终端或者iTerm，先检测有没有安装node、npm、git 123node -v npm --versiongit --version  然后安装hexo 1npm install -g hexo-cli  安装用于部署到Git的插件 1npm install hexo-deployer-git --save  创建一个存放blog的文件夹 12345678#在用户目录下面创建一个">
+<meta name="description" content="文章内容介绍了安装Hexo，以及管理GitHub和域名绑定。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo+GitHub+域名绑定">
 <meta property="og:url" content="http://yoursite.com/2020/03/26/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/index.html">
 <meta property="og:site_name" content="Ice Bear&#39;s Blog">
-<meta property="og:description" content="Hexo 进入终端或者iTerm，先检测有没有安装node、npm、git 123node -v npm --versiongit --version  然后安装hexo 1npm install -g hexo-cli  安装用于部署到Git的插件 1npm install hexo-deployer-git --save  创建一个存放blog的文件夹 12345678#在用户目录下面创建一个">
+<meta property="og:description" content="文章内容介绍了安装Hexo，以及管理GitHub和域名绑定。">
 <meta property="article:published_time" content="2020-03-26T07:30:18.000Z">
-<meta property="article:modified_time" content="2020-03-27T05:43:35.334Z">
+<meta property="article:modified_time" content="2020-05-21T08:09:29.618Z">
 <meta property="article:author" content="Ice Bear">
 <meta name="twitter:card" content="summary">
 
@@ -331,7 +331,10 @@
       
 
       
-        <h2 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h2><ul>
+        <p>文章内容介绍了安装Hexo，以及管理GitHub和域名绑定。</p>
+<a id="more"></a>
+
+<h2 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h2><ul>
 <li><p>进入终端或者iTerm，先检测有没有安装node、npm、git</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">node -v </span><br><span class="line">npm --version</span><br><span class="line">git --version</span><br></pre></td></tr></table></figure>
 </li>
@@ -392,6 +395,16 @@
 <li><p>创建无后缀文件的目的是，Github Pages自动识别里面的域名并添加进去，就可实现与自己域名绑定访问。无后缀域名不要用文本文件创建，就算去掉rtf的后缀名，也会默认带标签进去无法识别域名。建议可以先随便写一个CNAME去掉后缀的文件同步到github，然后在github修改完成后把项目下载下来，在替换掉blog\source下面的CNAME文件再同步一下就可以了。在blog\source下面创建CNAME的目的是每次同步到github都可保证域名不变，如果你只在Github Pages设置域名，下一次同步就会取消掉上次设置好的域名，导致访问域名404。</p>
 </li>
 <li><p>至此绑定完成，去完善你的博客吧。</p>
+</li>
+</ul>
+<h1 id="其他问题"><a href="#其他问题" class="headerlink" title="其他问题"></a>其他问题</h1><ul>
+<li><p>文章列表出现数字问题，在文章里想要显示的地方加入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- more --&gt;</span><br></pre></td></tr></table></figure>
+
+<p>在这个标签的上面为显示在列表里的摘要内容</p>
+<p>在这个标签的下面显示为文章内容</p>
+</li>
+<li><p>其他的待补充</p>
 </li>
 </ul>
 
@@ -611,7 +624,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo"><span class="nav-number">1.</span> <span class="nav-text">Hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关联GitHub"><span class="nav-number">2.</span> <span class="nav-text">关联GitHub</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#域名绑定"><span class="nav-number">3.</span> <span class="nav-text">域名绑定</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo"><span class="nav-number">1.</span> <span class="nav-text">Hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关联GitHub"><span class="nav-number">2.</span> <span class="nav-text">关联GitHub</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#域名绑定"><span class="nav-number">3.</span> <span class="nav-text">域名绑定</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#其他问题"><span class="nav-number"></span> <span class="nav-text">其他问题</span></a></div>
             
 
           </div>
