@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="Ice Bear&#39;s Blog">
 <meta property="og:description" content="连接建立连接123456789101112131415161718192021222324252627282930313233343536&#x2F;**      host: 服务器地址      port: 服务器端口      tls:  是否使用tls协议，mosca是支持tls的，如果使用了要设置成true      keepalive: 心跳时间，单位秒，每隔固定时间发送心跳包, 心跳">
 <meta property="article:published_time" content="2020-05-21T02:43:13.000Z">
-<meta property="article:modified_time" content="2020-05-21T03:03:14.971Z">
+<meta property="article:modified_time" content="2020-05-21T03:08:58.442Z">
 <meta property="article:author" content="Ice Bear">
 <meta property="article:tag" content="iOS">
 <meta name="twitter:card" content="summary">
@@ -334,9 +334,11 @@
 <h3 id="连接部分的代理"><a href="#连接部分的代理" class="headerlink" title="连接部分的代理"></a>连接部分的代理</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;*在成功建立连接时调用</span><br><span class="line">@param session报告连接的MQTTSession</span><br><span class="line">@param Session Present表示代理发送的Session Present标志</span><br><span class="line">*&#x2F;</span><br><span class="line">- (void)connected:(MQTTSession *)session sessionPresent:(BOOL)sessionPresent;</span><br><span class="line">- (void)connectionRefused:(MQTTSession *)session error:(NSError *)error;</span><br><span class="line">- (void)connectionClosed:(MQTTSession *)session;</span><br><span class="line">- (void)connectionError:(MQTTSession *)session error:(NSError *)error;</span><br></pre></td></tr></table></figure>
 
 <h1 id="技术分析"><a href="#技术分析" class="headerlink" title="技术分析"></a>技术分析</h1><ol>
-<li><p>[[NSRunLoop currentRunLoop] addPort:[NSMachPort port] forMode:NSRunLoopCommonModes];<br>给RunLoop添加一个NSMachPort防止退出</p>
+<li><p>给RunLoop添加一个NSMachPort防止退出</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[[NSRunLoop currentRunLoop] addPort:[NSMachPort port] forMode:NSRunLoopCommonModes];</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>[[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:.1]];<br>不断循环等待状态变更，NSRunLoop的优点是不会阻塞当前线程还可以接收事件。</p>
+<li><p>不断循环等待状态变更，NSRunLoop的优点是不会阻塞当前线程还可以接收事件。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:.1]];</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>这里的transport是根据建立连接时传入的securityPolicy决定的</p>
 </li>
