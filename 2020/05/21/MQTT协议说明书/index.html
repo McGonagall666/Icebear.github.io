@@ -79,15 +79,15 @@
 
 
 
-<meta name="description" content="MQ Telemetry Transport（MQTT）是一个轻量级的基于代理的发布&#x2F;订阅消息协议。旨在开放、简单、轻量级、易实现。 非常适合在受限环境中使用，适用场景（不局限于这些）：  网络昂贵、带宽低或不可靠的地方 运行在嵌入式设备中受限于处理器和内存资源的情况  例如机器与机器的通信（M2M）以及物联网环境（IoT）。">
+<meta name="description" content="MQTT起源于上世界90年代的IBM，它是一种支持在各方之间异步通信的消息协议。异步消息协议在 空间和时间上将消息发送者与接收者分离，因此可以在不可靠的网络环境中进行扩展。虽然叫做消息 队列遥测传输，但它与消息队列毫无关系，而是使用了一个发布和订阅的模型。 MQTT是消息队列遥测传输协议，是最适合物联网的网络协议。 MQTT基于TCP&#x2F;IP协议构建，已经成为IoT通信的标准。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MQTT协议说明书">
 <meta property="og:url" content="http://yoursite.com/2020/05/21/MQTT%E5%8D%8F%E8%AE%AE%E8%AF%B4%E6%98%8E%E4%B9%A6/index.html">
 <meta property="og:site_name" content="Ice Bear&#39;s Blog">
-<meta property="og:description" content="MQ Telemetry Transport（MQTT）是一个轻量级的基于代理的发布&#x2F;订阅消息协议。旨在开放、简单、轻量级、易实现。 非常适合在受限环境中使用，适用场景（不局限于这些）：  网络昂贵、带宽低或不可靠的地方 运行在嵌入式设备中受限于处理器和内存资源的情况  例如机器与机器的通信（M2M）以及物联网环境（IoT）。">
+<meta property="og:description" content="MQTT起源于上世界90年代的IBM，它是一种支持在各方之间异步通信的消息协议。异步消息协议在 空间和时间上将消息发送者与接收者分离，因此可以在不可靠的网络环境中进行扩展。虽然叫做消息 队列遥测传输，但它与消息队列毫无关系，而是使用了一个发布和订阅的模型。 MQTT是消息队列遥测传输协议，是最适合物联网的网络协议。 MQTT基于TCP&#x2F;IP协议构建，已经成为IoT通信的标准。">
 <meta property="og:image" content="https://static.runoob.com/images/mix/mqtt-fidge-2.svg">
 <meta property="article:published_time" content="2020-05-21T08:49:08.000Z">
-<meta property="article:modified_time" content="2020-05-21T08:57:01.159Z">
+<meta property="article:modified_time" content="2020-05-21T09:21:37.218Z">
 <meta property="article:author" content="Ice Bear">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://static.runoob.com/images/mix/mqtt-fidge-2.svg">
@@ -334,15 +334,20 @@
 
       
         <p><img src="https://static.runoob.com/images/mix/mqtt-fidge-2.svg" alt="img"></p>
-<p>MQ Telemetry Transport（MQTT）是一个轻量级的基于代理的发布/订阅消息协议。旨在开放、简单、轻量级、易实现。</p>
+<p>MQTT起源于上世界90年代的IBM，它是一种支持在各方之间异步通信的消息协议。异步消息协议在</p>
+<p>空间和时间上将消息发送者与接收者分离，因此可以在不可靠的网络环境中进行扩展。虽然叫做消息</p>
+<p>队列遥测传输，但它与消息队列毫无关系，而是使用了一个发布和订阅的模型。</p>
+<p>MQTT是消息队列遥测传输协议，是最适合物联网的网络协议。</p>
+<p>MQTT基于TCP/IP协议构建，已经成为IoT通信的标准。</p>
+<a id="more"></a>
+
+<h1 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h1><p>MQ Telemetry Transport（MQTT）是一个轻量级的基于代理的发布/订阅消息协议。旨在开放、简单、轻量级、易实现。</p>
 <p>非常适合在受限环境中使用，适用场景（不局限于这些）：</p>
 <ul>
 <li>网络昂贵、带宽低或不可靠的地方</li>
 <li>运行在嵌入式设备中受限于处理器和内存资源的情况</li>
 </ul>
 <p>例如机器与机器的通信（M2M）以及物联网环境（IoT）。</p>
-<a id="more"></a>
-
 <h1 id="协议特性"><a href="#协议特性" class="headerlink" title="协议特性"></a>协议特性</h1><ul>
 <li>发布订阅消息模式提供了一对多消息分发，并将应用程序解耦</li>
 <li>消息传输内容负荷不可知性</li>
@@ -428,8 +433,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/05/21/MQTT3/" rel="next" title="MQTT（三）消息接收处理流程">
-                <i class="fa fa-chevron-left"></i> MQTT（三）消息接收处理流程
+              <a href="/2020/05/21/MQTT3/" rel="next" title="MQTTClient解析（三）消息接收处理流程">
+                <i class="fa fa-chevron-left"></i> MQTTClient解析（三）消息接收处理流程
               </a>
             
           </div>
@@ -573,7 +578,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#协议特性"><span class="nav-number">1.</span> <span class="nav-text">协议特性</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#概念"><span class="nav-number">1.</span> <span class="nav-text">概念</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#协议特性"><span class="nav-number">2.</span> <span class="nav-text">协议特性</span></a></li></ol></div>
             
 
           </div>
